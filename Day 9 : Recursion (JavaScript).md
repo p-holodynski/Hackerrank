@@ -1,12 +1,11 @@
 # Day 9 : Recursion
 ```javascript
-!! not finished !!
-function factorial(n, accumulator) {
-    if (n === 0){
-     return accumulator;
+function factorial(n) {
+    if (n > 1){
+     return n * factorial(n - 1);
     }
     else {
-        return factorial(n - 1, n * accumulator);
+        return n;
     }
 }
 ```
