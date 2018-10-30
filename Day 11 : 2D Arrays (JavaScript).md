@@ -6,7 +6,7 @@ function main() {
     for (let i = 0; i < 6; i++) {
         arr[i] = readLine().split(' ').map(arrTemp => parseInt(arrTemp, 10));
     }
-    let sum = 0;
+    let sumArr = [];
     let centre;
     
     for (let i = 1; i < arr.length - 1; i++){
@@ -29,9 +29,10 @@ function main() {
           checker += arr[i+1][j];
           checker += arr[i+1][j+1];
           //console.log(checker);
-          if (checker > sum){
-              sum = checker;
-          }
+          sumArr.push(checker);
         }
+       }
+       sumArr = sumArr.sort(function(a,b){return b - a});
+       console.log(sumArr[0]);
  }
  ```
